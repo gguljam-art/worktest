@@ -1,10 +1,10 @@
 # [level 0] 접두사인지 확인하기 - 181906 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181906?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181906?language=javascript) 
 
 ### 성능 요약
 
-메모리: 74.1 MB, 시간: 0.03 ms
+메모리: 44.1 MB, 시간: 0.11 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2026년 08월 24일 16:29:36
+2026년 08월 24일 16:41:28
 
 ### 문제 설명
 
