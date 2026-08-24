@@ -1,10 +1,10 @@
 # [level 0] 가까운 1 찾기 - 181898 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181898?language=cpp) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181898?language=javascript) 
 
 ### 성능 요약
 
-메모리: 6.18 MB, 시간: 0.14 ms
+메모리: 43.8 MB, 시간: 0.08 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2026년 08월 24일 13:57:10
+2026년 08월 24일 13:58:06
 
 ### 문제 설명
 
