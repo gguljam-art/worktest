@@ -1,7 +1,6 @@
 #include <string>
 #include <vector>
 #include <cmath>
-#include <iostream>
 
 using namespace std;
 
@@ -10,8 +9,6 @@ vector<float> getDV(vector<int> v1, vector<int>v2){
     float y= abs(v2[1] - v1[1]);
     
     float n = sqrt((x*x) + (y*y));
-    
-    cout << "dist:" << n << endl;
     
     vector<float> db;
     db.push_back(x/n);
@@ -41,9 +38,6 @@ int solution(vector<vector<int>> dots) {
             
             vector<float>line1 = getDV(dots[n1], dots[n2]);
             vector<float>line2 = getDV(dots[m1], dots[m2]);
-            
-            cout << line1[0] << "," << line2[0] << endl;
-            cout << line1[1] << "," << line2[1] << endl;
             
             if(line1[0] == line2[0] && line1[1] == line2[1]){
                 return 1;
