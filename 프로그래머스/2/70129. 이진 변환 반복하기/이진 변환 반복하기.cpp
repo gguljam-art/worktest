@@ -6,43 +6,15 @@
 
 using namespace std;
 
-string trans(long long n){
-    long long m = 1;
-    string str = "";
-    while (n - m > 0){
-        m*=2;
+string func(int n){
+    string str;
+    while(n > 0){
+        str += to_string(n%2);
+        n/=2;
     }
     
-    if(m > n) m/=2;
-    
-    while(m > 0){
-        if(n-m > 0){
-            str += "1";
-            n-=m;
-        }else if(n-m == 0){
-            str += "1";
-                n-=m;
-        }else{
-            str += "0";
-        }
-        m/=2;
-    }
-    
+    reverse(str.begin(),str.end());
     return str;
-}
-
-int func(string& s){
-    int zero_num = 0;
-    size_t st = 0;
-    
-    while((st = s.find('0', st)) != string::npos){
-        s.replace(st,1,"");
-        zero_num ++;
-    }
-    
-    s = trans(s.size());
-    
-    return zero_num;
 }
 
 vector<int> solution(string s) {
@@ -52,7 +24,9 @@ vector<int> solution(string s) {
     int index = 0;
 
     while(s != "1"){
-        znum += func(s);
+        int n = count(s.begin(),s.end(),'1');
+        znum += s.size() - n;
+        s = func(n);
         index ++;
     }
     
