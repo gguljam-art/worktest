@@ -9,26 +9,27 @@ using namespace std;
 vector<int> solution(vector<int> progresses, vector<int> speeds) {
     int length = progresses.size();
     vector<int>answer;
-    int index = 0;
+    queue<int>q;
     
-    int testint = 0;
-    while(index < length){
-        int n = 0;
-        for(int i = 0; i < length; i++){
-            progresses[i] += speeds[i];
+    for(int i = 0; i < length; i++){
+        int day = (100 - progresses[i]) / speeds[i];
+        if((100 - progresses[i]) % speeds[i] != 0){
+            day ++;
         }
-        while(progresses[index] >= 100 && index < length){
-            if(progresses[index] >= 100){
-                int num = progresses[index];
-                index ++;
-                n ++;
-            }
-        }
-        cout << endl;
-        if(n>0){
-            answer.push_back(n);
-        }
-        
+        q.push(day);
     }
+    
+    while(!q.empty()){
+        int max = q.front();
+        int index = 0;
+        while(!q.empty() && q.front() <= max){
+            q.pop();
+            index ++;
+        }
+        if(index){
+            answer.push_back(index);
+        }
+    }
+    
     return answer;
 }
